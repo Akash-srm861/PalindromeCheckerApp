@@ -115,6 +115,28 @@ public class PalindromeCheckerApp {
         System.out.println("Input : " + qsInput);
         System.out.println("Is Palindrome? : " + qsResult);
 
+        // UC7: Deque-Based Optimized Palindrome Check
+        String dequeInput = "madam";
+        java.util.Deque<Character> deque = new java.util.ArrayDeque<>();
+
+        // Insert each character into the deque
+        for (char c : dequeInput.toCharArray()) {
+            deque.addLast(c);
+        }
+
+        boolean dequeResult = true;
+
+        // Compare front and rear until deque has one or zero elements
+        while (deque.size() > 1) {
+            if (deque.pollFirst() != deque.pollLast()) {
+                dequeResult = false;
+                break;
+            }
+        }
+
+        System.out.println("Input : " + dequeInput);
+        System.out.println("Is Palindrome? : " + dequeResult);
+
     }
 
 }
