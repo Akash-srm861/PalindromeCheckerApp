@@ -42,6 +42,32 @@ public class PalindromeCheckerApp {
 
         scanner.close();
 
+        // UC4: Two Pointer Method
+        java.util.Scanner scanner2 = new java.util.Scanner(System.in);
+        System.out.print("Enter text: ");
+        String text = scanner2.next();
+        char[] chars = text.toCharArray();
+        int start = 0;
+        int end = chars.length - 1;
+        boolean result = true;
+
+        while (start < end) {
+            if (chars[start] != chars[end]) {
+                result = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+        if (result) {
+            System.out.println(text + " is a palindrome.");
+        } else {
+            System.out.println(text + " is not a palindrome.");
+        }
+
+        scanner2.close();
+
     }
 
 }
