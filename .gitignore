@@ -1,0 +1,10 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Compiled class files
+*.class
+
+# Ignore separate UseCase files (single-file approach)
+App/src/UseCase*.java
