@@ -24,6 +24,24 @@ public class PalindromeCheckerApp {
             System.out.println(word + " is not a palindrome.");
         }
 
+        // UC3: User Input - Reverse String Method
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        System.out.print("Enter text: ");
+        String input = scanner.next();
+        String reversed = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
+        }
+
+        if (input.equals(reversed)) {
+            System.out.println(input + " is a palindrome.");
+        } else {
+            System.out.println(input + " is not a palindrome.");
+        }
+
+        scanner.close();
+
     }
 
 }
