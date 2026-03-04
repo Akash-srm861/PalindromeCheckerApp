@@ -68,6 +68,32 @@ public class PalindromeCheckerApp {
 
         scanner2.close();
 
+        // UC5: Stack-Based Palindrome Check
+        java.util.Scanner scanner3 = new java.util.Scanner(System.in);
+        System.out.print("Enter text: ");
+        String stackWord = scanner3.next();
+        java.util.Stack<Character> stack = new java.util.Stack<>();
+
+        for (char c : stackWord.toCharArray()) {
+            stack.push(c);
+        }
+
+        boolean stackResult = true;
+        for (char c : stackWord.toCharArray()) {
+            if (c != stack.pop()) {
+                stackResult = false;
+                break;
+            }
+        }
+
+        if (stackResult) {
+            System.out.println(stackWord + " is a palindrome.");
+        } else {
+            System.out.println(stackWord + " is not a palindrome.");
+        }
+
+        scanner3.close();
+
     }
 
 }
