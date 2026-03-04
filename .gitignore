@@ -8,3 +8,7 @@ out/
 
 # Ignore separate UseCase files (single-file approach)
 App/src/UseCase*.java
+
+# Debug/temp output files
+*.txt
+!README.md
